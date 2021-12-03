@@ -1,4 +1,4 @@
-# SolarCalendar
+# SolarHijriCalendar or IranianCalendar
 
 This module allows you to output calendars like the Unix jcal program, and provides additional useful functions related
 to the calendar. By default, these calendars have Saturday as the first day of the week, and Friday as the last (the
@@ -7,7 +7,7 @@ Parameters that specify dates are given as integers. For related functionality, 
 
 ## About Solar Hijri Calendar
 
-The Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی, romanized: gāhshomāri-ye hejri-ye khorshidi; Pashto: لمريز
+From <a href=https://en.wikipedia.org/wiki/Solar_Hijri_calendar> wikipedia </a>, the Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی, romanized: gāhshomāri-ye hejri-ye khorshidi; Pashto: لمريز
 لېږدیز کلیز), also called the Iranian Hijri calendar or Shamsi Hijri calendar, and abbreviated as SH and, sometimes, HS,
 is the official calendar of Iran and Afghanistan. It begins on the March equinox (Nowruz) as determined by astronomical
 calculation for the Iran Standard Time meridian (52.5°E, UTC+03:30) and has years of 365 or 366 days.
@@ -21,6 +21,4 @@ results in less variability of all celestial bodies when comparing a specific ca
 
 Each of the twelve months corresponds with a zodiac sign. The first six months have 31 days, the next five have 30 days,
 and the last month has 29 days in usual years but 30 days in leap years. The Iranian New Year's Day always falls on the
-March equinox. 
-
-for more information,click  <a href=https://en.wikipedia.org/wiki/Solar_Hijri_calendar>  here ... </a>
+March equinox.
