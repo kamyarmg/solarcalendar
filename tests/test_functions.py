@@ -1,3 +1,4 @@
+from calendar import formatstring
 from unittest import TestCase
 
 from src.solarcalendar.main import *
@@ -58,3 +59,5 @@ class MonthRangeTestCase(TestCase):
 
     def test_for_esfand_of_leap_year(self):
         self.assertEqual((6, 30), monthrange(1399, 12))
+
+formatstring()
