@@ -8,9 +8,9 @@ Parameters that specify dates are given as integers. For related functionality, 
 
 ## Example
 ```python
-    from solar_hijri_calendar import SolarHijriCalendar
-    calendar = SolarHijriCalendar()
-    print(a.formatmonth(1399, 10))
+>>> from solar_hijri_calendar import TextSolarHijriCalendar
+>>> calendar = TextSolarHijriCalendar()
+>>> print(a.formatmonth(1399, 10))
 
       Dey 1399
 Sa Su Mo Tu We Th Fr
@@ -20,6 +20,39 @@ Sa Su Mo Tu We Th Fr
 20 21 22 23 24 25 26
 27 28 29 30
 
+>>> print(calendar.formatyear(1399))
+
+                                  1399
+     Farvardin                Ordibehesht                 Khordad
+Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr
+                   1             1  2  3  4  5                      1  2
+ 2  3  4  5  6  7  8       6  7  8  9 10 11 12       3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15      13 14 15 16 17 18 19      10 11 12 13 14 15 16
+16 17 18 19 20 21 22      20 21 22 23 24 25 26      17 18 19 20 21 22 23
+23 24 25 26 27 28 29      27 28 29 30 31            24 25 26 27 28 29 30
+30 31                                               31
+        Tir                      Mordad                  Shahrivar
+Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr
+    1  2  3  4  5  6                   1  2  3       1  2  3  4  5  6  7
+ 7  8  9 10 11 12 13       4  5  6  7  8  9 10       8  9 10 11 12 13 14
+14 15 16 17 18 19 20      11 12 13 14 15 16 17      15 16 17 18 19 20 21
+21 22 23 24 25 26 27      18 19 20 21 22 23 24      22 23 24 25 26 27 28
+28 29 30 31               25 26 27 28 29 30 31      29 30 31
+        Mehr                      Aban                      Azar
+Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr
+          1  2  3  4                      1  2       1  2  3  4  5  6  7
+ 5  6  7  8  9 10 11       3  4  5  6  7  8  9       8  9 10 11 12 13 14
+12 13 14 15 16 17 18      10 11 12 13 14 15 16      15 16 17 18 19 20 21
+19 20 21 22 23 24 25      17 18 19 20 21 22 23      22 23 24 25 26 27 28
+26 27 28 29 30            24 25 26 27 28 29 30      29 30
+        Dey                      Bahman                    Esfand
+Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr
+       1  2  3  4  5                   1  2  3                         1
+ 6  7  8  9 10 11 12       4  5  6  7  8  9 10       2  3  4  5  6  7  8
+13 14 15 16 17 18 19      11 12 13 14 15 16 17       9 10 11 12 13 14 15
+20 21 22 23 24 25 26      18 19 20 21 22 23 24      16 17 18 19 20 21 22
+27 28 29 30               25 26 27 28 29 30         23 24 25 26 27 28 29
+                                                    30
 ```
 ## About Solar Hijri Calendar
 
