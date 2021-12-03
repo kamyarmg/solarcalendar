@@ -5,6 +5,22 @@ to the calendar. By default, these calendars have Saturday as the first day of t
 Iranian convention). Use setfirstweekday() to set the first day of the week to Monday (2) or to any other weekday.
 Parameters that specify dates are given as integers. For related functionality, see also the datetime and time modules.
 
+
+## Example
+```python
+    from solar_hijri_calendar import SolarHijriCalendar
+    calendar = SolarHijriCalendar()
+    print(a.formatmonth(1399, 10))
+
+      Dey 1399
+Sa Su Mo Tu We Th Fr
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+```
 ## About Solar Hijri Calendar
 
 From <a href=https://en.wikipedia.org/wiki/Solar_Hijri_calendar> wikipedia </a>, the Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی, romanized: gāhshomāri-ye hejri-ye khorshidi; Pashto: لمريز

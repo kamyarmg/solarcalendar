@@ -13,9 +13,8 @@ __all__ = ["IllegalMonthError", "IllegalWeekdayError", "setfirstweekday",
            "firstweekday", "isleap", "leapdays", "weekday", "monthrange",
            "monthcalendar", "prmonth", "month", "prcal", "calendar", "timegm",
            "month_name", "month_abbr", "day_name", "day_abbr",
-           "SolarHijriCalendar",
-           "TextSolarHijriCalendar", "HTMLSolarHijriCalendar",
-           "LocaleTextSolarHijriCalendar",
+           "SolarHijriCalendar", "TextSolarHijriCalendar",
+           "HTMLSolarHijriCalendar", "LocaleTextSolarHijriCalendar",
            "LocaleHTMLSolarHijriCalendar", "weekheader", ]
 
 # Exception raised for bad input (with string parameter for details)

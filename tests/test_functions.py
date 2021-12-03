@@ -1,7 +1,7 @@
 from calendar import formatstring
 from unittest import TestCase
 
-from src.solarcalendar.main import *
+from src.solar_hijri_calendar.main import *
 
 
 class IsLeapTestCase(TestCase):
