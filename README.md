@@ -1,4 +1,4 @@
-# SolarHijriCalendar or IranianCalendar
+# SolarCalendar or IranianCalendar
 
 This module allows you to output calendars like the Unix jcal program, and provides additional useful functions related
 to the calendar. By default, these calendars have Saturday as the first day of the week, and Friday as the last (the
@@ -8,8 +8,8 @@ Parameters that specify dates are given as integers. For related functionality, 
 
 ## Example
 ```python
->>> from solar_hijri_calendar import TextSolarHijriCalendar
->>> calendar = TextSolarHijriCalendar()
+>>> from solarcalendar import TextSolarCalendar
+>>> calendar = TextSolarCalendar()
 >>> print(a.formatmonth(1399, 10))
 
       Dey 1399
@@ -54,7 +54,7 @@ Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr      Sa Su Mo Tu We Th Fr
 27 28 29 30               25 26 27 28 29 30         23 24 25 26 27 28 29
                                                     30
 ```
-## About Solar Hijri Calendar
+## About SolarCalendar
 
 From <a href=https://en.wikipedia.org/wiki/Solar_Hijri_calendar> wikipedia </a>, the Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی, romanized: gāhshomāri-ye hejri-ye khorshidi; Pashto: لمريز
 لېږدیز کلیز), also called the Iranian Hijri calendar or Shamsi Hijri calendar, and abbreviated as SH and, sometimes, HS,
