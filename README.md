@@ -1,6 +1,6 @@
 # SolarCalendar or IranianCalendar
 
-This module allows you to output calendars like the Unix jcal program, and provides additional useful functions related
+This module copy of python calendar moudle but used Solar Hijri calnedar instead  Gregorian calendar system and allows you to output calendars like the Unix jcal program, and provides additional useful functions related
 to the calendar. By default, these calendars have Saturday as the first day of the week, and Friday as the last (the
 Iranian convention). Use setfirstweekday() to set the first day of the week to Monday (2) or to any other weekday.
 Parameters that specify dates are given as integers. For related functionality, see also the datetime and time modules.
