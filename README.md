@@ -10,7 +10,7 @@ Parameters that specify dates are given as integers. For related functionality, 
 ```python
 >>> from solarcalendar import TextSolarCalendar
 >>> calendar = TextSolarCalendar()
->>> print(a.formatmonth(1399, 10))
+>>> print(calendar.formatmonth(1399, 10))
 
       Dey 1399
 Sa Su Mo Tu We Th Fr
