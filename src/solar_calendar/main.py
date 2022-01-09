@@ -1,4 +1,4 @@
-"""SolarHijriCalendar printing functions
+"""SolarCalendar printing functions
 
 these calendars have Saturday as the first day of the week, and
 Friday as the last (the Iranian convention). Use setfirstweekday() to
@@ -13,9 +13,9 @@ __all__ = ["IllegalMonthError", "IllegalWeekdayError", "setfirstweekday",
            "firstweekday", "isleap", "leapdays", "weekday", "monthrange",
            "monthcalendar", "prmonth", "month", "prcal", "calendar", "timegm",
            "month_name", "month_abbr", "day_name", "day_abbr",
-           "SolarHijriCalendar", "TextSolarHijriCalendar",
-           "HTMLSolarHijriCalendar", "LocaleTextSolarHijriCalendar",
-           "LocaleHTMLSolarHijriCalendar", "weekheader", ]
+           "SolarCalendar", "TextSolarCalendar",
+           "HTMLSolarCalendar", "LocaleTextSolarCalendar",
+           "LocaleHTMLSolarCalendar", "weekheader", ]
 
 # Exception raised for bad input (with string parameter for details)
 error = ValueError
@@ -154,7 +154,7 @@ def _nextmonth(year, month):
         return year, month + 1
 
 
-class SolarHijriCalendar(object):
+class SolarCalendar(object):
     """
     Base calendar class. This class doesn't do any formatting. It simply
     provides data to subclasses.
@@ -298,7 +298,7 @@ class SolarHijriCalendar(object):
         return [months[i: i + width] for i in range(0, len(months), width)]
 
 
-class TextSolarHijriCalendar(SolarHijriCalendar):
+class TextSolarCalendar(SolarCalendar):
     """
     Subclass of Calendar that outputs a calendar as a simple plain text
     similar to the UNIX program cal.
@@ -410,7 +410,7 @@ class TextSolarHijriCalendar(SolarHijriCalendar):
         print(self.formatyear(theyear, w, l, c, m), end="")
 
 
-class HTMLSolarHijriCalendar(SolarHijriCalendar):
+class HTMLSolarCalendar(SolarCalendar):
     """
     This calendar returns complete HTML pages.
     """
@@ -550,7 +550,7 @@ class HTMLSolarHijriCalendar(SolarHijriCalendar):
         )
         if css is not None:
             a('<link rel="stylesheet" type="text/css" href="%s" />\n' % css)
-        a("<title>Solar Hijri Calendar for %d</title>\n" % theyear)
+        a("<title>Solar  Calendar for %d</title>\n" % theyear)
         a("</head>\n")
         a("<body>\n")
         a(self.formatyear(theyear, width))
@@ -571,7 +571,7 @@ class different_locale:
         _locale.setlocale(_locale.LC_TIME, self.oldlocale)
 
 
-class LocaleTextSolarHijriCalendar(TextSolarHijriCalendar):
+class LocaleTextSolarCalendar(TextSolarCalendar):
     """
     This class can be passed a locale name in the constructor and will return
     month and weekday names in the specified locale. If this locale includes
@@ -580,7 +580,7 @@ class LocaleTextSolarHijriCalendar(TextSolarHijriCalendar):
     """
 
     def __init__(self, firstweekday=0, locale=None):
-        TextSolarHijriCalendar.__init__(self, firstweekday)
+        TextSolarCalendar.__init__(self, firstweekday)
         if locale is None:
             locale = _locale.getdefaultlocale()
         self.locale = locale
@@ -602,7 +602,7 @@ class LocaleTextSolarHijriCalendar(TextSolarHijriCalendar):
             return s.center(width)
 
 
-class LocaleHTMLSolarHijriCalendar(HTMLSolarHijriCalendar):
+class LocaleHTMLSolarCalendar(HTMLSolarCalendar):
     """
     This class can be passed a locale name in the constructor and will return
     month and weekday names in the specified locale. If this locale includes
@@ -611,7 +611,7 @@ class LocaleHTMLSolarHijriCalendar(HTMLSolarHijriCalendar):
     """
 
     def __init__(self, firstweekday=0, locale=None):
-        HTMLSolarHijriCalendar.__init__(self, firstweekday)
+        HTMLSolarCalendar.__init__(self, firstweekday)
         if locale is None:
             locale = _locale.getdefaultlocale()
         self.locale = locale
@@ -630,7 +630,7 @@ class LocaleHTMLSolarHijriCalendar(HTMLSolarHijriCalendar):
 
 
 # Support for old module level interface
-c = TextSolarHijriCalendar()
+c = TextSolarCalendar()
 
 firstweekday = c.getfirstweekday
 
@@ -743,9 +743,9 @@ def main(args):
 
     if options.type == "html":
         if options.locale:
-            cal = LocaleHTMLSolarHijriCalendar(locale=locale)
+            cal = LocaleHTMLSolarCalendar(locale=locale)
         else:
-            cal = HTMLSolarHijriCalendar()
+            cal = HTMLSolarCalendar()
         encoding = options.encoding
         if encoding is None:
             encoding = sys.getdefaultencoding()
@@ -760,9 +760,9 @@ def main(args):
             sys.exit(1)
     else:
         if options.locale:
-            cal = LocaleTextSolarHijriCalendar(locale=locale)
+            cal = LocaleTextSolarCalendar(locale=locale)
         else:
-            cal = TextSolarHijriCalendar()
+            cal = TextSolarCalendar()
         optdict = dict(w=options.width, l=options.lines)
         if options.month is None:
             optdict["c"] = options.spacing
