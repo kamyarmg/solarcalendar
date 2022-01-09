@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "jdatetime>=3.8.0",
+    "jdatetime",
     "setuptools>=42",
     "wheel"
 ]
